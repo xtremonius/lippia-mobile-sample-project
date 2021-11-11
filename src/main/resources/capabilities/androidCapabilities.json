@@ -2,7 +2,9 @@
   "deviceName": "{{deviceName}}",
   "app": "{{app}}",
   "platformName": "Android",
-  "avd": "{{avd}}",
+  "deviceId": "192.168.1.21:5555",
   "resetKeyboard": "true",
-  "unicodeKeyboard": "true"
+  "unicodeKeyboard": "true",
+  "appPackage": "me.clockify.android",
+  "appActivity": "me.clockify.android.presenter.SplashActivity"
 }
