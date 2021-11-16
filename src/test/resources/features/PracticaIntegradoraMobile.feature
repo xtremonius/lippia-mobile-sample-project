@@ -24,3 +24,22 @@
       Examples:
         | email                  | password   |
         | aaquino@cidecom.com.ar | 12345678   |
+
+
+    @Demo
+    Scenario Outline: 3)the user set a ticket.
+      Given The app is loaded correctly
+      And The user logs in the application with: <email>, <password>
+      Then The user log in satisfactory
+      And The user presses time entries button
+      And The user changes the hours
+      And The user set a project
+      And The user select a project
+      And The user presses save
+      Then the user verify that the ticket was created "<project>"
+
+
+      @Demo2
+      Examples:
+        | email                  | password   | project          |
+        | aaquino@cidecom.com.ar | 12345678   | Proyecto_Academy |

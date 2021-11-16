@@ -39,28 +39,25 @@ public class HomeSteps extends PageSteps {
 
     @And("The user presses tap-nav")
     public void theUserPressesTapNav() {
-        MobileActionManager.waitVisibility(HomeConstants.TAP_NAV);
-        Assert.assertTrue(MobileActionManager.isVisible(HomeConstants.TAP_NAV));
-        MobileActionManager.click(HomeConstants.TAP_NAV);
+        HomeService.pressesTap();
+
     }
 
     @And("The user presses settings")
     public void theUserPressesSettings() {
-        MobileActionManager.waitVisibility(HomeConstants.SETTING_BAR);
-        Assert.assertTrue(MobileActionManager.isVisible(HomeConstants.SETTING_BAR));
-        MobileActionManager.click(HomeConstants.SETTING_BAR);
+        HomeService.pressesSettings();
+
     }
 
-    @io.cucumber.java.en.Then("Dark mode is enabled")
+    @Then("Dark mode is enabled")
     public void darkModeIsEnabled() {
-        String checked = getAttribute(HomeConstants.SETTING_DARK_MODE, "checked");
-        Assert.assertEquals(checked, "true", "No se cambio el valor");
+        HomeService.darkModeVerify();
+
     }
 
     @And("The user presses dark mode")
     public void theUserPressesDarkMode() {
-        MobileActionManager.waitVisibility(HomeConstants.SETTING_DARK_MODE);
-        Assert.assertTrue(MobileActionManager.isVisible(HomeConstants.SETTING_DARK_MODE));
-        MobileActionManager.click(HomeConstants.SETTING_DARK_MODE);
+        HomeService.pressesDarkMode();
+
     }
 }

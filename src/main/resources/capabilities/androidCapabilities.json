@@ -2,7 +2,7 @@
   "deviceName": "{{deviceName}}",
   "app": "{{app}}",
   "platformName": "Android",
-  "deviceId": "192.168.1.21:5555",
+  "deviceId": "192.168.0.28:5555",
   "resetKeyboard": "true",
   "unicodeKeyboard": "true",
   "appPackage": "me.clockify.android",
